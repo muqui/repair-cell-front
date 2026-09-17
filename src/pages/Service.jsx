@@ -23,7 +23,7 @@ export const Service = () => {
       try {
         const response = await axios.get(apiUrl, {
           headers: {
-            "x-client-id": "pos_modulo_reparacion",
+            "x-client-id": "store_db",
             "Content-Type": "application/json",
           },
         });
