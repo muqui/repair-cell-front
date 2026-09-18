@@ -17,13 +17,13 @@ export const Service = () => {
   const [error, setError] = useState();
 
   const apiUrl = `${import.meta.env.VITE_API_URL}${import.meta.env.VITE_SERVICE}/${folio}`;
-
+  const xClientId = import.meta.env.VITE_X_CLIENT_ID;
   useEffect(() => {
     const fetchRepair = async () => {
       try {
         const response = await axios.get(apiUrl, {
           headers: {
-            "x-client-id": "store_db",
+            "x-client-id": xClientId,
             "Content-Type": "application/json",
           },
         });

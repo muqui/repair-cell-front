@@ -1,22 +1,26 @@
-import { Routes, Route } from 'react-router-dom'; // Importar Routes y Route
 import '../App.css';
-import Header from '../components/Header'; // Asegúrate de que Header esté en la misma carpeta o ajusta la ruta
+import Header from '../components/Header';
 import Servicios from '../components/Servicios';
 import Contacto from '../components/Contacto';
-import Registro from '../components/Registro'; // Asegúrate de que tienes el componente de Registro
+import Registro from '../components/Registro';
 import { Hero } from '../components/Hero';
 import { OrderFolioForm } from '../components/OrderFolioForm';
 
 function Index() {
   return (
     <div>
-     <Header />
-      <div className="max-w-7xl mx-auto pt-5 mt-3 px-4">
-         
-        <Hero/>
-        <OrderFolioForm />
-        <Servicios />
-        <Contacto />
+      <Header />
+
+      {/* Hero con texto que sube sobre la imagen fija */}
+      <Hero />
+
+      {/* Contenido que sube y TAPA la imagen fija */}
+      <div className="relative bg-white">
+        <div className="max-w-7xl mx-auto pt-5 mt-3 px-4">
+          <OrderFolioForm />
+          <Servicios />
+          <Contacto />
+        </div>
       </div>
     </div>
   );
