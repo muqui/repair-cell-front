@@ -6,7 +6,7 @@ export const Hero = () => {
       {/* Imagen FIJA global - nunca se mueve, cubre TODO el viewport */}
       <div
         className="fixed inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url("/images/main.jpg")', zIndex: -1 }}
+        style={{ backgroundImage: 'url("/images/main.png")', zIndex: -1 }}
       />
 
       {/* Sección del Hero: solo el texto, que sube con el scroll */}
